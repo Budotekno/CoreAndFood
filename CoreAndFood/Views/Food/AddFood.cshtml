@@ -1,0 +1,53 @@
+﻿@model CoreAndFood.Models.Food
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<br />
+<div class="container-fluid">
+    <h3>Gıda Ekle</h3>
+    <hr />
+    <form action="/Food/AddFood" method="post">
+
+        <label>Gıda Adı</label>
+        <input type="text" name="Name" placeholder="Gıda adını giriniz..." class="form-control" />
+        <br />
+
+        <label>Kategori Türü </label>
+        <select class="form-control" name="CategoryId">
+            <option value="0" >Seçiniz</option>
+            @for (int i = 0; i < ViewBag.CategoryList.Count; i++)
+            {
+
+            <option value="@ViewBag.CategoryList[i].Value" > @ViewBag.CategoryList[i].Text  </option>
+            }
+          
+        </select>
+        <br />
+
+        <label>Fiyatı</label>
+        <input type="number" min="0" name="Price" placeholder="Ürün fiyatını giriniz..." class="form-control" />
+        <br />
+
+        <label>Stok</label>
+        <input type="number" min="0" name="Stock" placeholder="Stok adetini giriniz..." class="form-control" />
+        <br />
+
+        <label>Ürün Fotoğraf Url</label>
+        <input type="text" name="ImageUrl" placeholder="Fotoğraf url'ini' giriniz..." class="form-control" />
+        <br />
+
+
+        <label>Açıklama</label>
+        <textarea name="Description" rows="3" placeholder=" Açıklamayı giriniz..." class="form-control"></textarea>
+        <br />
+
+        <a href="/Food/Index" class="btn btn-danger">İptal</a>
+        <input type="submit" class="btn btn-success" value="Kaydet" />
+    </form>
+
+</div>
+
+<br /><br />

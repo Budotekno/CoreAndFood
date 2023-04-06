@@ -1,0 +1,8 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_VitrinLayout.cshtml";
+}
+
+
+@await Component.InvokeAsync("FoodListByCategory",new { id= ViewBag.id})

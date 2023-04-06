@@ -1,0 +1,165 @@
+﻿
+
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Custom Theme files -->
+    <link href="~/Temalar/istatistik/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <script src="~/Temalar/istatistik/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/Temalar/istatistik/css/font-awesome.css">
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Metro Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link href="~/Temalar/istatistik/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+    <script src="~/Temalar/istatistik/js/easyResponsiveTabs.js" type="text/javascript"></script>
+
+    <script src="~/Temalar/istatistik/js/main.js"></script> <!-- Resource jQuery -->
+    <!-- chart -->
+    <script src="~/Temalar/istatistik/js/Chart1.js"></script>
+    <!-- //chart -->
+</head>
+<body>
+
+    <div style="width:1125px">
+
+        <br />
+        <h3 style="margin-left:20px">İstatistikler</h3>
+        <div class="total-content">
+            <div class="list_of_members">
+                <div class="sales" style="background-color:#1abc9c">
+                    <div class="icon-text">
+                        <h3>@ViewBag.d1</h3>
+                        <p>Gıda Sayısı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="new-users" style="background-color:#2ecc71">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d2</h3>
+                        <p>Kategori Sayısı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="orders" style="background-color:#3498db">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d3</h3>
+                        <p>Meyve Sayısı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="visitors" style="background-color:#9b59b6">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d4</h3>
+                        <p>İçecek Sayısı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+
+        <div class="total-content">
+            <div class="list_of_members">
+                <div class="sales" style="background-color:#f1c40f">
+                    <div class="icon-text">
+                        <h3>@ViewBag.d5</h3>
+                        <p>Toplam Gıda</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="new-users" style="background-color:#e67e22">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d6</h3>
+                        <p>Sebze Sayısı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="orders" style="background-color:#e74c3c">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d7</h3>
+                        <p>Mak Stoklu Gıda</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="visitors" style="background-color:#95a5a6">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d8</h3>
+                        <p>Min Stoklu Gıda</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+
+
+        <div class="clearfix"></div>
+
+        <div class="total-content">
+            <div class="list_of_members">
+                <div class="sales" style="background-color: #c56cf0 ">
+                    <div class="icon-text">
+                        <h3>@ViewBag.d9 ₺</h3>
+                        <p>Gıdaların Ort Fiyafı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="new-users" style="background-color: #ffb8b8 ">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d10</h3>
+                        <p>Toplam İçecek Sayısı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="orders" style="background-color: #fff200 ">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d11</h3>
+                        <p>Toplam Meyve Sayısı</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="visitors" style="background-color: #ff9f1a ">
+
+                    <div class="icon-text">
+                        <h3>@ViewBag.d12</h3>
+                        <p>En Pahalı Gıda</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>

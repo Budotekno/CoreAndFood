@@ -1,0 +1,76 @@
+﻿
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Mvc.Common
+
+@using CoreAndFood.Models
+@model IPagedList<Food>
+
+@{
+    ViewData["Title"] = "Gıda";
+}
+
+<br />
+
+<div class="container-fluid">
+    <h3>Gıda Listesi</h3>
+
+    <a class="btn btn-success" href="/Food/AddFood">Yeni Ekle</a>
+    <br />
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Gıda Fotoğraf</th>
+                <th scope="col">Gıda Adı</th>
+                <th scope="col">Kategori Adı</th>
+                <th scope="col">Fiyat</th>
+                <th scope="col">Stok</th>
+                <th scope="col">Sil</th>
+                <th scope="col">Güncelle</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{ int a = 1;}
+            @foreach (var i in Model)
+            {
+            <tr>
+                <th scope="row">@a</th>
+                <td>
+                    <img src="@i.ImageUrl" width="100" height="100" />
+                </td>
+                <td>@i.Name</td>
+                <td>@i.Category.CategoryName</td>
+                <td>@i.Price</td>
+                <td>@i.Stock</td>
+                <td>
+                    <a href="/Food/DeleteFood/@i.FoodId" class="btn btn-danger">Sil</a>
+                </td>
+                <td>
+                    <a class="btn btn-warning" href="/Food/GetFood/@i.FoodId">Güncelle</a>
+                </td>
+            </tr>
+
+                a++;
+            }
+
+
+
+        </tbody>
+
+    </table>
+
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }),new PagedListRenderOptionsBase
+    {
+        LiElementClasses = new List<string>
+        { "page-link"}
+    }
+    )
+
+</div>
+
+<br />
+

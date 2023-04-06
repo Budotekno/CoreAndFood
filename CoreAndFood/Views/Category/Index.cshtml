@@ -1,0 +1,72 @@
+﻿@using CoreAndFood.Models
+@model List<Category>
+
+@{
+    ViewData["Title"] = "Kategori";
+}
+
+<br />
+
+
+<div class="container-fluid">
+    <h3>Kategori Listesi</h3>
+
+    <a class="btn btn-success" href="/Category/AddCategory">Yeni Ekle</a>
+    <br />
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Kategori Adı</th>
+                <th scope="col">Durumu</th>
+                <th scope="col">Aktif/Pasif</th>
+                <th scope="col">Güncelle</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{ int a = 1;}
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <th scope="row">@a</th>
+                    <td>@i.CategoryName</td>
+                    @if (i.Status == true)
+                    {
+                        <td class="text-success">Aktif</td>
+                    }
+                    else
+                    {
+                        <td class="text-danger">Pasif</td>
+                    }
+                <td>
+                    @if (i.Status == true)
+                    {
+
+                        <a class="btn btn-danger" href="/Category/DeleteCategory/@i.CategoryId">Pasif Yap</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success" href="/Category/DeleteCategory/@i.CategoryId">Aktif Yap</a>
+
+                    }
+
+                </td>
+                    <td>
+                        <a class="btn btn-warning" href="/Category/GetCategory/@i.CategoryId">Güncelle</a>
+                    </td>
+                </tr>
+
+                a++;
+            }
+
+
+
+        </tbody>
+
+    </table>
+
+</div>
+
+

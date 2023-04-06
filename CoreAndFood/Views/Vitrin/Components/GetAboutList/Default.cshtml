@@ -1,0 +1,14 @@
+@using CoreAndFood.Models
+@model List<AboutList>
+
+ <div class="col-md-6 agile_about_grid_left">
+    <ol>
+        @foreach (var i in Model)
+        {
+            <li>@i.AboutListMadde</li>
+            
+        }
+        
+    </ol>
+</div>
+<div class="clearfix"> </div>

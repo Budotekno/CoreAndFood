@@ -1,0 +1,32 @@
+@model CoreAndFood.Models.AboutYorum
+
+<div class="container-fluid">
+
+<br />
+
+
+<h3>Köşe Yazısı Güncelle</h3>
+
+<form action="/About/UpdateAboutYorum/" method="post">
+
+          
+    <input hidden name="AboutYorumId" value="@Html.ValueFor(x=>x.AboutYorumId)" class="form-control" />
+
+    <div class="mt-3">
+        <label>Sözü Yazan </label>
+        <input type="text" name="AboutYorumName" required value="@Html.ValueFor(x=>x.AboutYorumName)" class="form-control" />
+    </div>
+
+        <div class="mt-3">
+        <label>Söz </label>
+        <textarea  name="AboutYorumCommet" required class="form-control">@Html.ValueFor(x=>x.AboutYorumCommet)</textarea>
+    </div>
+
+    <div class="mt-3">
+        <a href="/About/Index" type="button"  class="btn btn-danger">İptal</a>
+        <button type="submit"  class="btn btn-warning">Güncelle</button>
+    </div>
+
+</form>
+
+</div>

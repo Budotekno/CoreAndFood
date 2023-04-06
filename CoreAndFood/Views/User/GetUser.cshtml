@@ -1,0 +1,46 @@
+@model CoreAndFood.Models.Admin
+@{
+    ViewData["Title"] = "GetUser";
+}
+
+
+<div class="container-fluid">
+
+<br />
+
+
+<h3>Madde Başı Güncelle</h3>
+
+<form action="/User/UpdateUser/" method="post">
+
+          
+    <input hidden name="AdminId" value="@Html.ValueFor(x=>x.AdminId)" class="form-control" />
+
+    <div class="mt-3">
+        <label>Kullanıcı Adı </label>
+        <input type="text" name="UserName" required value="@Html.ValueFor(x=>x.UserName)" class="form-control" />
+    </div>
+
+    <div class="mt-3">
+        <label>Şifre </label>
+        <input type="text" name="UserPassword" required value="@Html.ValueFor(x=>x.UserPassword)" class="form-control" />
+    </div>
+
+   @*  <div class="mt-3">
+        <label>Yetkisi</label>
+        <select required class="form-control" name="Role" >
+            <option>Seçiniz</option>
+            <option value="A">Yönetici</option>
+            <option value="B">Kullanıcı</option>
+        </select>
+        <input type="text" name="UserPassword" required value="@Html.ValueFor(x=>x.Role)" class="form-control" />
+    </div> *@
+
+    <div class="mt-3">
+        <a href="/User/Index" type="button"  class="btn btn-danger">İptal</a>
+        <button type="submit"  class="btn btn-warning">Güncelle</button>
+    </div>
+
+</form>
+
+</div>

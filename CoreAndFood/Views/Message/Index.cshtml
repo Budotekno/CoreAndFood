@@ -1,0 +1,66 @@
+﻿@using CoreAndFood.Models
+@model List<Message>
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <br />
+    
+
+    <h3>Mesaj Listesi</h3>
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-danger">
+            Mesaj gönderen kimse yok.
+
+        </div>
+
+    }
+    else
+    {
+
+        <table class="table table-striped">
+            <thead>
+
+                <tr>
+                    <th>#</th>
+                    <th>Adı</th>
+                    <th>Soyadı</th>
+                    <th>Mail</th>
+                    <th>Konu</th>
+                    <th>Mesaj</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @{ int a = 1;}
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>@a</td>
+                        <td>@i.MessageName</td>
+                        <td>@i.MessageSurname</td>
+                        <td>@i.MessageMail</td>
+                        <td>@i.MessageSubject</td>
+                        <td>@i.MessageLongMessage</td>
+                        <td>
+                            <a href="/Message/DeleteMessage/@i.MessageId" class="btn btn-outline-danger">Sil</a>
+                        </td>
+
+                    </tr>
+
+                    a++;
+                }
+
+            </tbody>
+        </table>
+    }
+
+
+</div>

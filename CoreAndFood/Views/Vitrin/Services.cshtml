@@ -1,0 +1,199 @@
+﻿@using CoreAndFood.Models
+@model List<Service>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_VitrinLayout.cshtml";
+}
+
+<!-- products-breadcrumb -->
+<div class="products-breadcrumb">
+    <div class="container">
+        <ul>
+            <li><i class="fa fa-home" aria-hidden="true"></i><a href="/Vitrin/Index/">Anasayfa</a><span>|</span></li>
+            <li>Hizmetlerimiz</li>
+        </ul>
+    </div>
+</div>
+<!-- //products-breadcrumb -->
+
+@foreach (var i in Model)
+{
+    <!-- banner -->
+
+    <div class="w3l_banner_nav_center">
+        <!-- services -->
+        <div class="services">
+            <h3>Hizmetlerimiz</h3>
+            <div class="w3ls_service_grids">
+                <div class="col-md-5 w3ls_service_grid_left">
+                    <h4>@i.ServicesHeadding</h4>
+                    <p style="text-align:justify">
+                        @i.ServicesHeaddingDepCommet
+                    </p>
+                </div>
+                <div class="col-md-7 w3ls_service_grid_right">
+                    <div class="col-md-4 w3ls_service_grid_right_1">
+                        <img src="@i.ServicesHeaddingPicture1" alt=" " class="img-responsive" />
+                    </div>
+                    <div class="col-md-4 w3ls_service_grid_right_1">
+                        <img src="@i.ServicesHeaddingPicture2" alt=" " class="img-responsive" />
+                    </div>
+                    <div class="col-md-4 w3ls_service_grid_right_1">
+                        <img src="@i.ServicesHeaddingPicture3" alt=" " class="img-responsive" />
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="w3ls_service_grids1">
+                <div class="col-md-6 w3ls_service_grids1_left">
+                    <img src="@i.ServicesMatterPicture" alt=" " class="img-responsive" />
+                </div>
+
+                @await Component.InvokeAsync("GetServiceList")
+
+               
+            </div>
+        </div>
+        <!-- //services -->
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- //banner -->
+    <!-- services-bottom -->
+    <div class="services-bottom">
+        <div class="container">
+            <div class="col-md-3 about_counter_left">
+                <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+                <p class="counter">@i.ServicesMatter1Number</p>
+                <h3>@i.ServicesMatter1Name</h3>
+            </div>
+            <div class="col-md-3 about_counter_left">
+                <i class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></i>
+                <p class="counter">@i.ServicesMatter2Number</p>
+                <h3>@i.ServicesMatter2Name</h3>
+            </div>
+            <div class="col-md-3 about_counter_left">
+                <i class="glyphicon glyphicon-export" aria-hidden="true"></i>
+                <p class="counter">@i.ServicesMatter3Number</p>
+                <h3>@i.ServicesMatter3Name</h3>
+            </div>
+            <div class="col-md-3 about_counter_left">
+                <i class="glyphicon glyphicon-bullhorn" aria-hidden="true"></i>
+                <p class="counter">@i.ServicesMatter4Number</p>
+                <h3>@i.ServicesMatter4Name</h3>
+            </div>
+            <div class="clearfix"> </div>
+            <!-- Stats-Number-Scroller-Animation-JavaScript -->
+            <script src="/Temalar/vitrin/js/waypoints.min.js"></script>
+            <script src="/Temalar/vitrin/js/counterup.min.js"></script>
+            <script>
+                jQuery(document).ready(function ($) {
+                    $('.counter').counterUp({
+                        delay: 10,
+                        time: 1000
+                    });
+                });
+            </script>
+            <!-- //Stats-Number-Scroller-Animation-JavaScript -->
+
+        </div>
+    </div>
+    <!-- //services-bottom -->
+    <!-- newsletter-top-serv-btm -->
+    <div class="newsletter-top-serv-btm">
+        <div class="container">
+            <div class="col-md-4 wthree_news_top_serv_btm_grid">
+                <div class="wthree_news_top_serv_btm_grid_icon">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+                <h3>@i.ServicesWriting1Name</h3>
+                <p>
+                    @i.ServicesWriting1Commet
+                </p>
+            </div>
+            <div class="col-md-4 wthree_news_top_serv_btm_grid">
+                <div class="wthree_news_top_serv_btm_grid_icon">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                </div>
+                <h3>@i.ServicesWriting2Name</h3>
+                <p>
+                    @i.ServicesWriting2Commet
+                </p>
+            </div>
+            <div class="col-md-4 wthree_news_top_serv_btm_grid">
+                <div class="wthree_news_top_serv_btm_grid_icon">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <h3>@i.ServicesWriting2Name</h3>
+                <p>
+                    @i.ServicesWriting2Commet
+                </p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //newsletter-top-serv-btm -->
+
+}
+
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/Temalar/vitrin/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".dropdown").hover(
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                $(this).toggleClass('open');
+            },
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                $(this).toggleClass('open');
+            }
+        );
+    });
+</script>
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //here ends scrolling icon -->
+<!-- //here ends scrolling icon -->
+<script src="/Temalar/vitrin/js/minicart.js"></script>
+<script>
+    paypal.minicart.render();
+
+    paypal.minicart.cart.on('checkout', function (evt) {
+        var items = this.items(),
+            len = items.length,
+            total = 0,
+            i;
+
+        // Count the number of each item in the cart
+        for (i = 0; i < len; i++) {
+            total += items[i].get('quantity');
+        }
+
+        if (total < 3) {
+            alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+            evt.preventDefault();
+        }
+    });
+
+</script>

@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_VitrinLayout.cshtml";
+
+}
+
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+    <!-- products-breadcrumb -->
+    <div class="products-breadcrumb">
+        <div class="container">
+            <ul>
+                <li><i class="fa fa-home" aria-hidden="true"></i><a href="/Vitrin/Index/">Anasayfa</a><span>/</span></li>
+                <li>İletişim</li>
+            </ul>
+        </div>
+    </div>
+    <!-- //products-breadcrumb -->
+    <!-- banner -->
+  
+        <div class="w3l_banner_nav_center">
+            <!-- mail -->
+            <div class="mail">
+                <h3>İletişim</h3>
+                <div class="agileinfo_mail_grids">
+
+                    <div class="col-md-4 agileinfo_mail_grid_left">
+
+                       @await Component.InvokeAsync("Contact")
+                       
+                    </div>
+                    <div class="col-md-8 agileinfo_mail_grid_right">
+                        
+                        <form action="/Vitrin/AddMessage/" method="post">
+                            <div class="col-md-6 wthree_contact_left_grid">
+                                <input type="text" name="MessageName" placeholder="Adınız..." required>
+                                <input type="email" name="MessageMail" placeholder="Mailiniz..." required>
+                            </div>
+                            <div class="col-md-6 wthree_contact_left_grid">
+                                <input type="text" name="MessageSurname" required placeholder="Soyadınız...">
+                                <input type="text" name="MessageSubject" placeholder="Konu yazınız..." required>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <div>
+                                <textarea name="MessageLongMessage"  required placeholder="Mesajınız..."></textarea>
+                            </div>
+                            <div >
+                                <input type="submit"  value="Gönder">
+                            </div>
+
+                            
+                        </form>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <!-- //mail -->
+        </div>
+        <div class="clearfix"></div>
+
+    <!-- //banner -->
+ 
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Temalar/vitrin/js/bootstrap.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');
+        }
+    );
+});
+    </script>
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+    </script>
+    <!-- //here ends scrolling icon -->
+    <script src="/Temalar/vitrin/js/minicart.js"></script>
+    <script>
+		paypal.minicart.render();
+
+		paypal.minicart.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
+
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
+
+			if (total < 3) {
+				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
+
+    </script>
+

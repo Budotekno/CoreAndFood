@@ -1,0 +1,88 @@
+@using CoreAndFood.Models
+@model List<ServiceList>
+
+<br>
+<!-- Default box -->
+<div class="card">
+<div class="card-header">
+    <h3 class="card-title">Hizmet Madde Başı</h3>
+
+    <div class="card-tools">
+    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+        <i class="fas fa-minus"></i>
+    </button>
+    </div>
+</div>
+<div class="card-body p-0">
+    <br>
+    <button type="button" style="margin-left: 10px;" data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Ekle</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Madde Başı Ekle</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form action="/Services/AddServiceList/" method="post">
+         <div class="modal-body">
+        <div class="mt-3">
+            <label>Madde Başı</label>
+            <input type="text" class="form-control" name="ServiceListMadde" placeholder="Madde başını yazınız..." required >
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>
+        <button type="submit" class="btn btn-success">Ekle</button>
+      </div>
+        
+      </form>
+     
+    </div>
+  </div>
+</div>
+    <br>
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Madde Başı</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int a=1;}
+        @foreach (var i in Model)
+        {            
+            <tr>
+                <td>@a</td>
+                <td>@i.ServiceListMadde</td>
+                <td>
+                    <a href="/Services/DeleteServiceList/@i.ServiceListId" class="btn btn-danger">Sil</a>
+                </td>
+                <td>
+                    <a href="/Services/GetServiceList/@i.ServiceListId" class="btn btn-warning">Güncelle</a>
+                </td>
+            </tr>
+
+            a++;
+        }
+
+      
+
+
+
+        </tbody>
+    </table>
+</div>
+<!-- /.card-body -->
+</div>
+
+<br>
+<!-- /.card -->

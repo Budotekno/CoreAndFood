@@ -1,0 +1,28 @@
+@model CoreAndFood.Models.AboutList
+
+<div class="container-fluid">
+
+<br />
+
+
+<h3>Hakkımızda Liste Güncelle</h3>
+
+<form action="/About/UpdateAboutList/" method="post">
+
+          
+    <input hidden name="AboutListId" value="@Html.ValueFor(x=>x.AboutListId)" class="form-control" />
+
+    <div class="mt-3">
+        <label>Madde </label>
+        <input type="text" name="AboutListMadde" required value="@Html.ValueFor(x=>x.AboutListMadde)" class="form-control" />
+    </div>
+
+      
+    <div class="mt-3">
+        <a href="/About/Index" type="button"  class="btn btn-danger">İptal</a>
+        <button type="submit"  class="btn btn-warning">Güncelle</button>
+    </div>
+
+</form>
+
+</div>

@@ -1,0 +1,156 @@
+@model CoreAndFood.Models.Service
+@{
+    ViewData["Title"] = "GetServices";
+}
+
+<div class="container-fluid">
+
+    <br />
+
+
+    <h3>Hizmetlerimizi Güncelle</h3>
+
+<form action="/Services/UpdateService/" method="post">
+
+            <div class="row">
+
+                <input hidden name="ServicesId" value="@Html.ValueFor(x=>x.ServicesId)" class="form-control" />
+
+
+            <div class="col-md-6">
+
+                <div class="mt-3">
+                <label>Başlık </label>
+                <input type="text" name="ServicesHeadding" value="@Html.ValueFor(x=>x.ServicesHeadding)" class="form-control" />
+            </div>
+
+            <div class="mt-3"> 
+                <label>Açıklama</label>
+                <textarea  name="ServicesHeaddingDepCommet" class="form-control"  rows="3">@Html.ValueFor(x=>x.ServicesHeaddingDepCommet)</textarea>
+            
+            </div>
+
+            <div class="mt-3">
+                <label>Başlık Fotoğraf Url - 1</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesHeaddingPicture1)" name="ServicesHeaddingPicture1" class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>Başlık Fotoğraf Url - 2</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesHeaddingPicture2)" name="ServicesHeaddingPicture2" class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>Başlık Fotoğraf Url - 3</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesHeaddingPicture3)"  name="ServicesHeaddingPicture3" class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>Madde Fotoğrafı</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatterPicture)"  name="ServicesMatterPicture" class="form-control" />
+            </div>
+
+
+             <div class="mt-3">
+                <label>İstatistik - 1</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter1Name)" name="ServicesMatter1Name" class="form-control" />
+            </div>
+
+
+            <div class="mt-3">
+                <label>İstatistik Değeri - 1</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter1Number)" name="ServicesMatter1Number" class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>İstatistik - 2</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter2Name)" name="ServicesMatter2Name" class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>İstatistik Değeri - 2</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter2Number)" name="ServicesMatter2Number" class="form-control" />
+            </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+             <div class="mt-3">
+                <label>İstatistik - 3</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter3Name)" name="ServicesMatter3Name" class="form-control" />
+            </div>
+
+
+             <div class="mt-3">
+                <label>İstatistik Değeri - 3</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter3Number)" name="ServicesMatter3Number" class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>İstatistik - 4</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter4Name)" name="ServicesMatter4Name" class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>İstatistik Değeri - 4</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesMatter4Number)"  name="ServicesMatter4Number" class="form-control" />
+            </div>
+
+
+            <div class="mt-3">
+                <label>Hizmet Adı - 1</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesWriting1Name)" name="ServicesWriting1Name" class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>Hizmet Açıklaması - 1</label>
+                <textarea rows="2" name="ServicesWriting1Commet" class="form-control">@Html.ValueFor(x=>x.ServicesWriting1Commet)</textarea>
+               
+            </div>
+
+            <div class="mt-3">
+                <label>Hizmet Adı - 2</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesWriting2Name)" name="ServicesWriting2Name" class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>Hizmet Açıklaması - 2</label>
+                <textarea rows="2" name="ServicesWriting2Commet" class="form-control">@Html.ValueFor(x=>x.ServicesWriting2Commet)</textarea>
+            </div>
+
+            <div class="mt-3">
+                <label>Hizmet Adı - 3</label>
+                <input type="text" value="@Html.ValueFor(x=>x.ServicesWriting3Name)" name="ServicesWriting3Name" class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>Hizmet Açıklaması - 3</label>
+                <textarea rows="2" name="ServicesWriting3Commet" class="form-control">@Html.ValueFor(x=>x.ServicesWriting3Commet)</textarea>
+            </div>
+
+
+            </div>
+
+             <div class="mt-3">
+            <a  href="/Services/Index" type="submit"  class="btn btn-danger">İptal</a>
+            <button type="submit"  class="btn btn-warning">Güncelle</button>
+
+
+            </div>
+
+        
+        </div>
+            
+
+
+</form>
+   
+
+        
+       
+
+
+</div>
+
+<br /><br />

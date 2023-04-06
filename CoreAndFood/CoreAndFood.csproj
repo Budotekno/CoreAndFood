@@ -1,0 +1,118 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Admin\**" />
+    <Compile Remove="wwwroot\NewFolder\**" />
+    <Content Remove="wwwroot\Admin\**" />
+    <Content Remove="wwwroot\NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\Admin\**" />
+    <EmbeddedResource Remove="wwwroot\NewFolder\**" />
+    <None Remove="wwwroot\Admin\**" />
+    <None Remove="wwwroot\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Temalar\istatistik\.gitattributes" />
+    <None Include="wwwroot\Temalar\istatistik\js\Chart1.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\clndr.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\easyResponsiveTabs.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\jquery.easydropdown.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\jquery.min.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\jquery.nicescroll.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\jquery.vmap.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\jquery.vmap.sampledata.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\jquery.vmap.world.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\main.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\moment-2.2.1.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\site.js" />
+    <None Include="wwwroot\Temalar\istatistik\js\underscore-min.js" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="wwwroot\Temalar\login\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <None Include="wwwroot\Temalar\login\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="wwwroot\Temalar\login\js\main.js" />
+    <None Include="wwwroot\Temalar\login\vendor\animsition\js\animsition.js" />
+    <None Include="wwwroot\Temalar\login\vendor\animsition\js\animsition.min.js" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\js\popper.js" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\js\popper.min.js" />
+    <None Include="wwwroot\Temalar\login\vendor\bootstrap\js\tooltip.js" />
+    <None Include="wwwroot\Temalar\login\vendor\countdowntime\countdowntime.js" />
+    <None Include="wwwroot\Temalar\login\vendor\daterangepicker\daterangepicker.js" />
+    <None Include="wwwroot\Temalar\login\vendor\daterangepicker\moment.js" />
+    <None Include="wwwroot\Temalar\login\vendor\daterangepicker\moment.min.js" />
+    <None Include="wwwroot\Temalar\login\vendor\jquery\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\Temalar\login\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <None Include="wwwroot\Temalar\login\vendor\select2\select2.js" />
+    <None Include="wwwroot\Temalar\login\vendor\select2\select2.min.js" />
+    <None Include="wwwroot\Temalar\vitrin\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Temalar\vitrin\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\Temalar\vitrin\js\bootstrap.min.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\counterup.min.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\creditly.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\easing.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\easyResponsiveTabs.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\jquery-1.11.1.min.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\jquery.flexslider.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\jquery.wmuSlider.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\minicart.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\move-top.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\okzoom.js" />
+    <None Include="wwwroot\Temalar\vitrin\js\waypoints.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="7.2.0" />
+  </ItemGroup>
+
+</Project>

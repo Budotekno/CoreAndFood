@@ -1,0 +1,132 @@
+﻿@using CoreAndFood.Models
+@model List<About>
+
+@{
+    Layout = "~/Views/Shared/_VitrinLayout.cshtml";
+}
+
+
+
+
+
+<!-- products-breadcrumb -->
+<div class="products-breadcrumb">
+    <div class="container">
+        <ul>
+            <li><i class="fa fa-home" aria-hidden="true"></i><a href="/Vitrin/Index/">Anasayfa</a><span>|</span></li>
+            <li>Hakkımızda</li>
+        </ul>
+    </div>
+</div>
+<!-- //products-breadcrumb -->
+<!-- banner -->
+
+<div >
+    <!-- about -->
+    <div class="privacy about">
+        <h3>Hakkımızda</h3>
+
+        @foreach (var i in Model)
+        {
+            <p class="animi" style="text-align:justify" >@i.AboutCommet</p>
+        <div class="agile_about_grids">
+            <div class="col-md-6 agile_about_grid_right">
+                <img src="@i.AboutPicture" alt=" " class="img-responsive" />
+            </div>
+           
+           @await Component.InvokeAsync("GetAboutList")
+        </div>
+            
+        }
+        
+    </div>
+    <!-- //about -->
+</div>
+<div class="clearfix"></div>
+<!-- //banner -->
+<!-- team -->
+<div class="team">
+    <div class="container">
+        <h3>Ekibimiz</h3>
+
+        @await Component.InvokeAsync("GetAboutUser")
+    </div>
+</div>
+<!-- //team -->
+<!-- testimonials -->
+<div class="testimonials">
+    <div class="container">
+        <h3>Köşe Yazıları</h3>
+        <div class="w3_testimonials_grids">
+            <div class="wmuSlider example1 animated wow slideInUp" data-wow-delay=".5s">
+                <div class="wmuSliderWrapper">
+                    
+                    @await Component.InvokeAsync("GetAboutYorum")
+
+                </div>
+            </div>
+            <script src="/Temalar/vitrin/js/jquery.wmuSlider.js"></script>
+            <script>
+                $('.example1').wmuSlider();
+            </script>
+        </div>
+    </div>
+</div>
+<!-- //testimonials -->
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/Temalar/vitrin/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".dropdown").hover(
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                $(this).toggleClass('open');
+            },
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                $(this).toggleClass('open');
+            }
+        );
+    });
+</script>
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //here ends scrolling icon -->
+<script src="/Temalar/vitrin/js/minicart.js"></script>
+<script>
+    paypal.minicart.render();
+
+    paypal.minicart.cart.on('checkout', function (evt) {
+        var items = this.items(),
+            len = items.length,
+            total = 0,
+            i;
+
+        // Count the number of each item in the cart
+        for (i = 0; i < len; i++) {
+            total += items[i].get('quantity');
+        }
+
+        if (total < 3) {
+            alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+            evt.preventDefault();
+        }
+    });
+
+</script>

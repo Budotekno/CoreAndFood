@@ -1,0 +1,96 @@
+@using CoreAndFood.Models
+@model List<AboutList>
+
+<br>
+<!-- Default box -->
+<div class="card">
+<div class="card-header">
+    <h3 class="card-title">Hakkımızda Liste</h3>
+
+    <div class="card-tools">
+    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+        <i class="fas fa-minus"></i>
+    </button>
+    </div>
+</div>
+<div class="card-body p-0">
+
+
+    <br>
+    <button type="button" style="margin-left: 10px;" data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Ekle</button>
+    <br>
+
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Maddeler</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        @{int a = 1;}
+        @foreach (var i in Model)
+        {
+            <tr>
+                <th>@a</th>
+                <td>@i.AboutListMadde</td>
+                <td>
+                    <a href="/About/DeleteAboutList/@i.AboutListId" class="btn btn-danger">Sil</a>
+                </td>
+                <td>
+                    <a href="/About/GetAboutList/@i.AboutListId" class="btn btn-warning">Güncelle</a>
+                </td>
+            </tr> 
+
+            a++;
+        }
+       
+
+
+        </tbody>
+    </table>
+</div>
+<!-- /.card-body -->
+</div>
+<!-- /.card -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hakkımızda Liste Ekle</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form action="/About/AddAboutList/" method="post">
+         <div class="modal-body">
+        <div class="mt-1">
+            <label>Madde Adı</label>
+            <input type="text" class="form-control" name="AboutListMadde" placeholder="Madde adını yazınız..." required >
+        </div>
+
+
+       
+
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>
+        <button type="submit" class="btn btn-success">Ekle</button>
+      </div>
+        
+      </form>
+     
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,16 @@
+@using CoreAndFood.Models
+@model List<ServiceList>
+
+<div class="col-md-6 w3ls_service_grids1_right">
+    <ul>
+        @foreach (var i in Model)
+        {
+            
+            <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>@i.ServiceListMadde</li>
+        }
+
+        
+    </ul>
+                   
+</div>
+<div class="clearfix"> </div>

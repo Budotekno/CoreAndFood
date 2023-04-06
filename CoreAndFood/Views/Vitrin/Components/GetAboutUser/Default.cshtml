@@ -1,0 +1,23 @@
+@using CoreAndFood.Models
+@model List<AboutUser>
+
+<div class="agileits_team_grids">
+
+    @foreach (var i in Model)
+    {
+         <div class="col-md-3 agileits_team_grid mb-3">
+                <img src="@i.AboutUserPictureUrl" alt=" " class="img-responsive" />
+                <h4>@i.AboutUserName</h4>
+                <p>@i.AboutUserJob</p>
+                <ul class="agileits_social_icons agileits_social_icons_team">
+                    <li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+    }
+           
+            
+          
+    <div class="clearfix"> </div>
+</div>

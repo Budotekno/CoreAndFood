@@ -1,0 +1,30 @@
+@model CoreAndFood.Models.ServiceList
+@{
+    ViewData["Title"] = "GetServiceList";
+}
+
+<div class="container-fluid">
+
+<br />
+
+
+<h3>Madde Başı Güncelle</h3>
+
+<form action="/Services/UpdateServiceList/" method="post">
+
+          
+    <input hidden name="ServiceListId" value="@Html.ValueFor(x=>x.ServiceListId)" class="form-control" />
+
+    <div class="mt-3">
+        <label>Madde Başı </label>
+        <input type="text" name="ServiceListMadde" required value="@Html.ValueFor(x=>x.ServiceListMadde)" class="form-control" />
+    </div>
+
+    <div class="mt-3">
+        <a href="/Services/Index" type="button"  class="btn btn-danger">İptal</a>
+        <button type="submit"  class="btn btn-warning">Güncelle</button>
+    </div>
+
+</form>
+
+</div>

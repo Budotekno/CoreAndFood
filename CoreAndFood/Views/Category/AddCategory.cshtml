@@ -1,0 +1,29 @@
+﻿@model CoreAndFood.Models.Category 
+
+@{
+}
+
+<br />
+<div class="container-fluid">
+    <h3>Kategori Ekle</h3>
+    <hr />
+    <form action="/Category/AddCategory" method="post">
+
+        <label>Kategori Adı</label>
+        <input type="text" name="CategoryName" placeholder="Kategori adını giriniz..." class="form-control" />
+        <span style="color:red;">
+            <b>
+                @Html.ValidationMessageFor(x => x.CategoryName)
+            </b>
+        </span>
+        <br />
+
+        <label>Açıklama</label>
+        <textarea name="CategoryDescription" rows="4" placeholder="Açıklama giriniz..." class="form-control"></textarea>
+        <br />
+
+        <a href="/Category/Index" class="btn btn-danger">İptal</a>
+        <input type="submit" class="btn btn-success" value="Kaydet" />
+    </form>
+
+</div>

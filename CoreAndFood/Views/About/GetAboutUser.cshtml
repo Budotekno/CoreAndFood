@@ -1,0 +1,39 @@
+@model CoreAndFood.Models.AboutUser
+
+<div class="container-fluid">
+
+<br />
+
+
+<h3>Çalışanlarımız Güncelle</h3>
+
+<form action="/About/UpdateAboutUser/" method="post">
+
+          
+    <input hidden name="AboutUserId" value="@Html.ValueFor(x=>x.AboutUserId)" class="form-control" />
+
+    <div class="mt-3">
+        <label>Fotoğraf Url </label>
+        <input type="text" name="AboutUserPictureUrl" required value="@Html.ValueFor(x=>x.AboutUserPictureUrl)" class="form-control" />
+    </div>
+
+     <div class="mt-3">
+        <label>Çalışan Adı </label>
+        <input type="text" name="AboutUserName" required value="@Html.ValueFor(x=>x.AboutUserName)" class="form-control" />
+    </div>
+
+     <div class="mt-3">
+        <label>Departmanı </label>
+        <input type="text" name="AboutUserJob" required value="@Html.ValueFor(x=>x.AboutUserJob)" class="form-control" />
+    </div>
+
+       
+
+    <div class="mt-3">
+        <a href="/About/Index" type="button"  class="btn btn-danger">İptal</a>
+        <button type="submit"  class="btn btn-warning">Güncelle</button>
+    </div>
+
+</form>
+
+</div>

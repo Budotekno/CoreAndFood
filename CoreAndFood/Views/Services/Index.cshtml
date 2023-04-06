@@ -1,0 +1,189 @@
+﻿@using CoreAndFood.Models
+@model List<Service>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br>
+<!-- Default box -->
+<div class="card">
+<div class="card-header">
+    <h3 class="card-title">Hizmetlerimiz</h3>
+
+    <div class="card-tools">
+    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+        <i class="fas fa-minus"></i>
+    </button>
+    </div>
+</div>
+<div class="card-body p-0">
+
+    
+<div class="container-fluid">
+
+    
+
+    @foreach (var i in Model)
+    {
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <div class="mt-3">
+                <label>Başlık </label>
+                <input type="text" disabled value="@i.ServicesHeadding" class="form-control" />
+            </div>
+
+            <div class="mt-3"> 
+                <label>Açıklama</label>
+                <textarea  disabled class="form-control"  rows="3">@i.ServicesHeaddingDepCommet</textarea>
+            
+            </div>
+
+            <div class="mt-3">
+                <label>Başlık Fotoğraf Url - 1</label>
+                <input type="text" value="@i.ServicesHeaddingPicture1" disabled class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>Başlık Fotoğraf Url - 2</label>
+                <input type="text" value="@i.ServicesHeaddingPicture2" disabled class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>Başlık Fotoğraf Url - 3</label>
+                <input type="text" value="@i.ServicesHeaddingPicture3" disabled class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>Madde Fotoğrafı</label>
+                <input type="text" value="@i.ServicesMatterPicture" disabled class="form-control" />
+            </div>
+
+
+             <div class="mt-3">
+                <label>İstatistik - 1</label>
+                <input type="text" value="@i.ServicesMatter1Name" disabled class="form-control" />
+            </div>
+
+
+            <div class="mt-3">
+                <label>İstatistik Değeri - 1</label>
+                <input type="text" value="@i.ServicesMatter1Number" disabled class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>İstatistik - 2</label>
+                <input type="text" value="@i.ServicesMatter2Name" disabled class="form-control" />
+            </div>
+
+            <div class="mt-3">
+                <label>İstatistik Değeri - 2</label>
+                <input type="text" value="@i.ServicesMatter2Number" disabled class="form-control" />
+            </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+             <div class="mt-3">
+                <label>İstatistik - 3</label>
+                <input type="text" value="@i.ServicesMatter3Name" disabled class="form-control" />
+            </div>
+
+
+             <div class="mt-3">
+                <label>İstatistik Değeri - 3</label>
+                <input type="text" value="@i.ServicesMatter3Number" disabled class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>İstatistik - 4</label>
+                <input type="text" value="@i.ServicesMatter4Name" disabled class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>İstatistik Değeri - 4</label>
+                <input type="text" value="@i.ServicesMatter4Number" disabled class="form-control" />
+            </div>
+
+
+            <div class="mt-3">
+                <label>Hizmet Adı - 1</label>
+                <input type="text" value="@i.ServicesWriting1Name" disabled class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>Hizmet Açıklaması - 1</label>
+                <textarea rows="2" disabled class="form-control">@i.ServicesWriting1Commet</textarea>
+               
+            </div>
+
+            <div class="mt-3">
+                <label>Hizmet Adı - 2</label>
+                <input type="text" value="@i.ServicesWriting2Name" disabled class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>Hizmet Açıklaması - 2</label>
+                <textarea rows="2" disabled class="form-control">@i.ServicesWriting2Commet</textarea>
+            </div>
+
+            <div class="mt-3">
+                <label>Hizmet Adı - 3</label>
+                <input type="text" value="@i.ServicesWriting3Name" disabled class="form-control" />
+            </div>
+
+             <div class="mt-3">
+                <label>Hizmet Açıklaması - 3</label>
+                <textarea rows="2" disabled class="form-control">@i.ServicesWriting3Commet</textarea>
+            </div>
+
+
+            </div>
+
+        </div>
+            
+        <div class="mt-3">
+            <a href="/Services/GetServices/@i.ServicesId" class="btn btn-warning">Güncelle</a>
+
+
+        </div>
+
+        <br>
+        <br>
+
+
+
+    }
+
+
+</div>
+
+</div>
+<!-- /.card-body -->
+</div>
+<!-- /.card -->
+
+@await Component.InvokeAsync("ServiceMaddebasi")
+
+
+
+
+
+
+
+<!-- jQuery -->
+<script src="~/Temalar/Admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/Temalar/Admin//plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/Temalar/Admin//dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/dist/js/demo.js"></script>
+
+
+

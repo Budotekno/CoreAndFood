@@ -1,0 +1,24 @@
+@using CoreAndFood.Models
+@model List<AboutYorum>
+
+@foreach (var i in Model)
+{
+    <article >
+    <div class="banner-wrap">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-8 w3_testimonials_grid">
+            <p style="text-align: justify;">
+                <i class="fa fa-quote-right" aria-hidden="true"></i>
+                @i.AboutYorumCommet
+            </p>
+            <h4> <span>@i.AboutYorumName</span> </h4>
+        </div>
+        <div class="col-md-2"></div>
+
+
+        <div class="clearfix"> </div>
+    </div>
+</article>
+    
+}
